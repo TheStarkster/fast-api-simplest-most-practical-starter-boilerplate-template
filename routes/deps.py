@@ -1,12 +1,12 @@
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from typing import Annotated
-from backend.config.jwt import verify_token
-from backend.config.db import get_db
+from config.jwt import verify_token
+from config.db import get_db
 from sqlalchemy.orm import Session
-from backend.models.user import User
+from models.user import User
 
-oauth2_scheme = OAuth2PasswordBearer()
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
 
 DBSession = Annotated[Session, Depends(get_db)]
 

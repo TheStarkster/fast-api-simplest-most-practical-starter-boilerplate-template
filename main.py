@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from backend.routes.routes import router as api_router
+from routes.routes import router as api_router
 
 app = FastAPI(title="Audio-to-Video Generator")
 

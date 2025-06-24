@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 from jose import JWTError, jwt
-from backend.models.user import User
+from models.user import User
 from typing import Optional
 
 SECRET_KEY = "super-secret-key"

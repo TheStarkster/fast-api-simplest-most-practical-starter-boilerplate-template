@@ -1,14 +1,14 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from backend.config.password import hash_password
-from backend.routes.deps import DBSession
-from backend.models.user import User
-from backend.schemas.user import UserCreate, UserResponse
-from backend.config.jwt import create_access_token
-from backend.config.password import verify_password
-from backend.routes.deps import get_current_user, DBSession
-from backend.models.user import User
-from backend.schemas.token import TokenRequest, TokenResponse
+from config.password import hash_password
+from routes.deps import DBSession
+from models.user import User
+from schemas.user import UserCreate, UserResponse
+from config.jwt import create_access_token
+from config.password import verify_password
+from routes.deps import get_current_user, DBSession
+from models.user import User
+from schemas.token import TokenRequest, TokenResponse
 from typing import Annotated
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
